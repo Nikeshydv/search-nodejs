@@ -1,24 +1,11 @@
-const express=require("express")
-
+const express=require("express");
 const router=express.Router();
 
-router.get("/stuinfo",(req,res)=>{
-    res.send("student info");
-})
-router.get("/stufee",(req,res)=>{
-    res.send("student fee");
-})
+const stucontroller=require("../controllers/studentController");
 
-router.get("/stuclass",(req,res)=>{
-    res.send("student class")
+router.get("/stuinfo",stucontroller.stuinfo);
+router.get("/stuFees",stucontroller.stuFees);
+router.get("/stuResult",stucontroller.stuResult);
+router.get("/stuSubject",stucontroller.stuSubject)
 
-})
-
-router.get("/sturesult",(req,res)=>{
-    res.send("student result")
-})
-
-
-
-
-module.exports=router
+module.exports=router;

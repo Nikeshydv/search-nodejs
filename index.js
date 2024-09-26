@@ -17,15 +17,19 @@
 const express=require("express")
 const PORT=8000;
 const app=express();
+
 const stuRoute=require("./routes/studentRoutes")
-const tecRoute=require("./routes/teacherRoutes")
+
 
 app.get("/",(req,res)=>{
-    res.send("<h1>hello world</h1>");
+    res.send("<h1>this is the home page</h1>");
+    
 })
 
-app.use("/student",stuRoute)
-app.use("/teacher",tecRoute);
+
+app.use("/students",stuRoute);
+
+
 
 app.listen(PORT,()=>{
     console.log(`server is running on port:${PORT}`)
