@@ -1,22 +1,10 @@
-const stuinfo=(req,res)=>{
-    res.send("<h1> this is the stident informaation ")
-}
+const stuModel=require("../models/studenetModels")
 
-const stuFees=(req,res)=>{
-    res.send("<h1> this is the student fees")
-}
+const stuInformation=(req,res)=>{
+    res.send("this is the student information we are from cybrom")
 
-const stuResult=(req,res)=>{
-    res.send("<h1> this is the student result")
-}
-
-const stuSubject=(req,res)=>{
-    res.send("<h1> this is the subject part")
 }
 
 module.exports={
-    stuinfo,
-    stuFees,
-    stuResult,
-    stuSubject
+    stuInformation
 }
